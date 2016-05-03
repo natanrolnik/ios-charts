@@ -79,7 +79,7 @@ public class ChartYAxisRenderer: ChartAxisRendererBase
         let rawInterval = range / Double(labelCount)
         var interval = ChartUtils.roundToNextSignificant(number: Double(rawInterval))
         
-        if(_yAxis.valueFormatter?.maximumFractionDigits == 0) {
+        if(yAxis.valueFormatter?.maximumFractionDigits == 0) {
             interval = interval < 1 ? 1 : floor(interval)
         }
         
